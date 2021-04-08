@@ -1,18 +1,58 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { getUser, setUser, updateUserChoice } from '../local-storage/storage.utilities.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
+test('get user from local storage', (expect) => {
     
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+    const user = {
+        name: 'billy',
+        points: 0,
+        completed: {}
+    };
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    localStorage.setItem('USER', JSON.stringify(user));
+    const actual = getUser();
+
+   
+    expect.deepEqual(actual, user);
+});
+
+test('put user into local storage', (expect) => {
+    
+    const user = {
+        name: 'billy',
+        points: 0,
+        completed: {}
+    };
+
+    setUser(user);
+    
+    const actual = JSON.parse(localStorage.getItem('USER'));
+    
+
+   
+    expect.deepEqual(actual, user);
+});
+
+
+test('update local storage based on user choice', (expect) => {
+    
+    const choice = {
+        points: 5,
+    };
+
+    const expected = {
+        points: 5,
+        name: 'billy',
+        completed: {
+            comedian: true
+        }
+    };
+    updateUserChoice('comedian', choice);
+
+    const actual = JSON.parse(localStorage.getItem('USER'));
+
+   
+    expect.deepEqual(actual, expected);
 });
