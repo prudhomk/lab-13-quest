@@ -32,4 +32,8 @@ button {
     margin: 10px;
 }
 
-  
+.map {
+    background-image: url('../assets/penguinvillage.png');
+    background-repeat: no-repeat;
+    background-size: 100rem;
+}

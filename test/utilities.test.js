@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { getUser, setUser, updateUserChoice } from '../local-storage/storage.utilities.js';
+import { getUser, setUser, updateUserChoice } from '../local-storage/storage-utilities.js';
 import { findById } from '../test/utilities.js';
 
 const test = QUnit.test;

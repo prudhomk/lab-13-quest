@@ -1,21 +1,44 @@
-import { setUser } from './local-storage/storage.utilities.js';
-const form = document.querySelector('form');
+//import { getUser } from './local-storage/storage.utilities.js';
+import trials from '../data.js';
+
+const section = document.querySelector('section');
 
 
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+for (let trial of trials) {
+    const link = document.createElement('a');
+    link.textContent = trial.title;
+    console.log(link);
+    link.href = `../trials/?id=${trial.id}`;
+
+    section.append(link);
+}
+
+
+
+
+
+
+
+
+
+
+
+
     
-    const data = new FormData(form);
-    const name = data.get('name');
-    
-    const user = {
-        name: name,
-        points: 0,
-        completed: {}
-    };
-
-    setUser(user);
-
-    window.location = './map';
-});
+    //const user = getUser();
+    //if (hasCompletedAllTrials(trials, user) {
+    //    window.location = '../results';
+    //}
+    //
+    //const nav = document.getElementById(trials);
+    //for(let task of trials) {
+    //    let trialDisplay = null;
+    //    if(user.completed[trialId]) {
+    //        trialDisplay = createCompletedTrial(trial);
+    //    } else {
+    //        trialDisplay = createTrialLink(trial);
+//
+    //    }
+    //    nav.appendChild(trialDisplay);
+    //}
