@@ -1,11 +1,10 @@
-import { setUser } from './local-storage/storage-utilities.js';
-const form = document.querySelector('.entry');
+import { setUser } from './local-storage/storage.utilities.js';
+const form = document.querySelector('form');
 
 
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log('clicked');
     
     const data = new FormData(form);
     const name = data.get('name');

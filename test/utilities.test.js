@@ -1,5 +1,6 @@
 // IMPORT MODULES under test here:
-import { getUser, setUser, updateUserChoice } from '../local-storage/storage.utilities.js';
+import { getUser, setUser, updateUserChoice } from '../local-storage/storage-utilities.js';
+import { findById } from '../test/utilities.js';
 
 const test = QUnit.test;
 
@@ -54,5 +55,17 @@ test('update local storage based on user choice', (expect) => {
     const actual = JSON.parse(localStorage.getItem('USER'));
 
    
+    expect.deepEqual(actual, expected);
+});
+
+test('Takes an array and returns an item by matching ID', (expect) => {
+
+    const array = [
+        { id: 'one', type: 'number' },
+        { id: 'two', type: 'number' }
+    ];
+    const expected = { id: 'one', type: 'number' };
+    const actual = findById(array, 'one');
+
     expect.deepEqual(actual, expected);
 });
