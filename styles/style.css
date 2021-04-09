@@ -54,8 +54,30 @@ button {
     flex-direction: column;
 }
 
-.links {
+.active-link {
     background: white;
     color: red;
     position: fixed;
+}
+
+.complete {
+    background:white;
+    position: fixed;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.result-prompt {
+    size: 20px;
+}
+
+.reset-button {
+    display: flex;
+    justify-content: center;
 }

@@ -1,6 +1,6 @@
 import { findById } from '../test/utilities.js';
 import trials from '../data.js';
-import { getUser, updateUserChoice } from '../local-storage/storage-utilities.js';
+import { updateUserChoice } from '../local-storage/storage-utilities.js';
 
 //obtaining correct trial ID for links
 const params = new URLSearchParams(window.location.search);
