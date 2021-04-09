@@ -1,8 +1,14 @@
 // IMPORT MODULES under test here:
-import { getUser, setUser, updateUserChoice } from '../local-storage/storage-utilities.js';
+import { getUser, setUser, updateUserChoice, endRace } from '../local-storage/storage-utilities.js';
 import { findById } from '../test/utilities.js';
 
 const test = QUnit.test;
+
+const trials = [
+    { id: 'a' },
+    { id: 'b' },
+    { id: 'c' }
+];
 
 test('get user from local storage', (expect) => {
     
@@ -68,4 +74,19 @@ test('Takes an array and returns an item by matching ID', (expect) => {
     const actual = findById(array, 'one');
 
     expect.deepEqual(actual, expected);
+});
+
+test('check if all trials are complete', (expect) => {
+
+    const user = {
+        completed: {
+            'a': true,
+            'b': true,
+            'c': true
+        }
+    };
+
+    const actual = endRace(trials, user);
+
+    expect.equal(actual, true);
 });

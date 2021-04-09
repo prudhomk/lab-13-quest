@@ -1,3 +1,5 @@
+
+
 const USER = 'USER';
 
 export function setUser(user) {
@@ -15,4 +17,14 @@ export function updateUserChoice(trialId, choice) {
     user.points += choice.points;
     user.completed[trialId] = true;
     setUser(user);
+}
+
+export function endRace(trials, user) {
+    for (let i = 0; i < trials.length; i++) {
+        const trial = trials[i];
+        if (!user.completed[trial.id]) {
+            return false;
+        }
+    }
+    return true;
 }
