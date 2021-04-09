@@ -11,7 +11,9 @@ for (let trial of trials) {
     link.classList.add('links');
     console.log(link);
     link.href = `../trials/?id=${trial.id}`;
-
+    
+    link.style.top = trial.map.top;
+    link.style.left = trial.map.left;
     section.append(link);
 }
 

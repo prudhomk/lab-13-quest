@@ -40,9 +40,6 @@ for (let choice of trial.choices) {
 
 const button = document.createElement('button');
 button.textContent = 'Select';
-//button.addEventListener ('click', () => {
-//    section.append(pResult);
-//});
 form.append(button);
 
 

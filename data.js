@@ -2,8 +2,8 @@ const comedian = {
     id: 'comedian',
     title: 'Make me Laugh',
     map: {
-        top: '65%',
-        left: '34%'
+        top: '70%',
+        left: '70%'
     },
     image: 'comedian.jpg',
     description: `
@@ -40,8 +40,8 @@ const lake = {
     id: 'lake',
     title: 'Cross the Lake',
     map: {
-        top: '80%',
-        left: '50%'
+        top: '20%',
+        left: '70%'
     },
     image: 'lake.jpg',
     description: `
