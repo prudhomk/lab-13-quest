@@ -36,6 +36,8 @@ button {
     background-image: url('../assets/penguinvillage.png');
     background-repeat: no-repeat;
     background-size: 100rem;
+    height: 100vh;
+    width: 100vh;
     position: absolute;
     image-resolution: 300dpi;
 
@@ -55,4 +57,5 @@ button {
 .links {
     background: white;
     color: red;
+    position: fixed;
 }
