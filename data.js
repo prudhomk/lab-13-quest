@@ -14,7 +14,7 @@ const comedian = {
             description: 'What\'s brown and sticky?  A stick!',
             result: `
             "Was that supposed to be funny?  No points for you!"
-            You walk away hanging your head in shame for stooping to such measures for a laugh.`,
+            You walk away hanging your head in shame for stooping to such low measures for a laugh.`,
             points: 0
         },
         {
@@ -26,8 +26,9 @@ const comedian = {
         },
         {
             id: 'accident',
-            description: 'You walk up to Mr. Grumps and trip over your own feet, falling to the ground in a very comedic fashion.',
+            description: 'Nothing.',
             result: `
+            You walk up to Mr. Grumps and trip over your own feet, falling to the ground in a very comedic fashion.
             "Bwahahaha!  Now that's funny!  You get extra points!"  
             You leave happy with the points, but at what cost?`,
             points: 5
@@ -100,7 +101,7 @@ const strength = {
             id: 'cookie',
             description: 'You take out a cookie.',
             result: `
-            You hold a delicious cookie in your hand, and through strength of will, don't eat it.  The judges aren't very impressed.`,
+            You hold a delicious cookie in your hand, and through sheer strength of will, don't eat it.  The judges aren't very impressed.`,
             points: 0
         } 
     ]

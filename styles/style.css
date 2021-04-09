@@ -36,7 +36,8 @@ button {
     background-image: url('../assets/penguinvillage.png');
     background-repeat: no-repeat;
     background-size: 100rem;
-    position: relative;
+    position: absolute;
+    image-resolution: 300dpi;
 
 }
 
@@ -49,4 +50,9 @@ button {
 .radio {
     display: flex;
     flex-direction: column;
+}
+
+.links {
+    background: white;
+    color: red;
 }

@@ -8,6 +8,7 @@ const section = document.querySelector('section');
 for (let trial of trials) {
     const link = document.createElement('a');
     link.textContent = trial.title;
+    link.classList.add('links');
     console.log(link);
     link.href = `../trials/?id=${trial.id}`;
 
