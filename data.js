@@ -3,7 +3,7 @@ const comedian = {
     title: 'Make me Laugh',
     map: {
         top: '70%',
-        left: '70%'
+        left: '60%'
     },
     image: 'comedian.jpg',
     description: `
@@ -41,7 +41,7 @@ const lake = {
     title: 'Cross the Lake',
     map: {
         top: '20%',
-        left: '70%'
+        left: '65%'
     },
     image: 'lake.jpg',
     description: `
@@ -77,7 +77,7 @@ const strength = {
     title: 'Prove your Strength',
     map: {
         top: '42%',
-        left: '10%'
+        left: '25%'
     },
     image: 'strength.jpg',
     description: `
@@ -106,9 +106,45 @@ const strength = {
         } 
     ]
 };
+
+const brains = {
+    id: 'brains',
+    title: 'Demonstrate your Knowledge',
+    map: {
+        top: '12%',
+        left: '22%'
+    },
+    image: 'brains.png',
+    description: `
+        Mayor's need to know lots of things, what do you know?`,
+    choices: [
+        {
+            id: 'numbers',
+            description: 'You hold up your hands.',
+            result: `
+            You proudly exclaim you can count to ten.  The judges are confused.`,
+            points: 2
+        },
+        {
+            id: 'dumb',
+            description: 'You attempt to double outwit them.',
+            result: `
+            You state that only a fool would try to prove their intelligence.  The judges award no points, you fool!`,
+            points: 0
+        },
+        {
+            id: 'trick',
+            description: 'You attempt to outwit them.',
+            result: `
+            "Look behind you!" you cry pointing behind the judges.  They turn to look behind them, giving you an opportunity to give yourself points.`,
+            points: 10
+        } 
+    ]
+};
 const trials = [
     comedian,
     lake,
-    strength
+    strength,
+    brains
 ];
 export default trials;
