@@ -50,8 +50,7 @@ button {
 
 .trial-image {
     size: 100px;
-    width: 50%;
-    height: 50%;
+   
 }
 
 .radio {
@@ -77,24 +76,17 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
+
+
 }
 
-.result-prompt {
-    size: 20px;
-    position: relative;
-}
 
-.resultImage {
-    width: 600px;
-    height: 400px;
-    position: fixed;
-}
 
-.reset-button {
-    display: flex;
-    justify-content: center;
-}
+
+
+
+
+
 
 .trial {
     background-color: orange;
@@ -102,4 +94,11 @@ button {
 
 .end {
     background-color: turquoise;
+}
+
+.audio {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -5,7 +5,7 @@ const form = document.querySelector('.entry');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    
+    window.open('../music');
     
     const data = new FormData(form);
     const name = data.get('name');
@@ -17,6 +17,5 @@ form.addEventListener('submit', (event) => {
     };
 
     setUser(user);
-
     window.location = './map';
 });
