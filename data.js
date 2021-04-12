@@ -43,7 +43,7 @@ const lake = {
         top: '20%',
         left: '65%'
     },
-    image: 'lake.jpg',
+    image: 'lake.gif',
     description: `
         Can you cross Loch Thedoorwhenyougoout?`,
     choices: [
