@@ -1,4 +1,4 @@
-import trials from '../data.js';
+
 
 export function findById(array, id) {
     

@@ -12,16 +12,16 @@ button.classList.add('reset-button');
 const resultImage = document.createElement('img');
 resultImage.classList.add('resultImage');
 
-if (user.points >= 15) {
-    results.textContent = `You have bested the rest of them ${user.name}, you are now the Mayor.  Are mayors strong?`;
+if (user.points === 30) {
+    results.textContent = `A perfect score of ${user.points}!  You have bested the rest of them ${user.name}, you are now the Mayor.  Are mayors strong?`;
     resultImage.src = '../assets/victory.gif';
     parade();
     
-} else if (user.points === 0) {
-    results.textContent = `You aren't fit to be Mayor ${user.name}!  Heck, you aren't even fit to be the Vice Mayor!`;
+} else if (user.points === 0 || user.points <= 10) {
+    results.textContent = `You aren't fit to be Mayor ${user.name}!  Heck, you aren't even fit to be the Vice Mayor! ${user.points} points?  Get outta here!`;
     resultImage.src = '../assets/lose.gif';
-} else if (user.points > 0 && user.points < 15) {
-    results.textContent = `You put on a good effort ${user.name}, but not good enough for Mayor. You can be the Traffic Controller instead.`;
+} else if (user.points > 10 && user.points < 30) {
+    results.textContent = `You put on a good effort ${user.name}, but a score of ${user.points} is not good enough for Mayor. You can be the Traffic Controller instead.`;
     resultImage.src = '../assets/average.gif';
 } else {
     results.textContent = 'Something went wrong, try it again from the top';

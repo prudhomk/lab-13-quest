@@ -147,7 +147,7 @@ const traffic = {
     title: 'Rules of the Road',
     map: {
         top: '75%',
-        left: '22%'
+        left: '30%'
     },
     image: 'yield.png',
     description: `
