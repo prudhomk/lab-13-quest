@@ -79,7 +79,7 @@ const strength = {
         top: '42%',
         left: '25%'
     },
-    image: 'strength.jpg',
+    image: 'strength.gif',
     description: `
         You must prove your strength to the judges, but how?`,
     choices: [
@@ -126,25 +126,62 @@ const brains = {
             points: 2
         },
         {
-            id: 'dumb',
-            description: 'You attempt to double outwit them.',
-            result: `
-            You state that only a fool would try to prove their intelligence.  The judges award no points, you fool!`,
-            points: 0
-        },
-        {
             id: 'trick',
             description: 'You attempt to outwit them.',
             result: `
             "Look behind you!" you cry pointing behind the judges.  They turn to look behind them, giving you an opportunity to give yourself points.`,
             points: 10
-        } 
+        }, 
+        {
+            id: 'dumb',
+            description: 'You attempt to double outwit them.',
+            result: `
+            You state that only a fool would try to prove their intelligence.  The judges award no points, you fool!`,
+            points: 0
+        }
+        
+    ]
+};
+const traffic = {
+    id: 'traffic',
+    title: 'Rules of the Road',
+    map: {
+        top: '75%',
+        left: '22%'
+    },
+    image: 'yield.png',
+    description: `
+        Surely the future Mayor knows what this Traffic Sign means?`,
+    choices: [
+        {
+            id: 'triangle',
+            description: 'Triangle!',
+            result: `
+            The Judges shuffle nervously, unsure how to respond to such a confident answer.  They give you points to make you leave.`,
+            points: 2
+        },
+        {
+            id: 'yield',
+            description: 'Yield.',
+            result: `
+            You yield?  Suit yourself, no points for you.`,
+            points: 0
+        }, 
+        {
+            id: 'slow',
+            description: 'Slow Down.',
+            result: `
+            "W-H-A-T D-O-E-S T-H-I-S S-I-G-N M-E-A-N?" repeat the Judges, slower this time.  You repeat your statement.  They slow down more.  The cycle continues until the judges die of old age (and frustration).  I guess you get points?`,
+            points: 5
+        }
+        
     ]
 };
 const trials = [
     comedian,
     lake,
     strength,
-    brains
+    brains,
+    traffic
 ];
 export default trials;

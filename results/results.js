@@ -1,20 +1,22 @@
 import { getUser } from '../local-storage/storage-utilities.js';
 
 const user = getUser();
+const caption = document.createElement('div');
+caption.classList.add('caption');
 const resultPrompt = document.querySelector('section');
 resultPrompt.classList.add('results');
 const results = document.createElement('p');
-results.classList.add('result-prompt');
+
 const button = document.querySelector('button');
 button.classList.add('reset-button');
 const resultImage = document.createElement('img');
 resultImage.classList.add('resultImage');
-const audio = document.createElement('audio');
+
 if (user.points >= 15) {
     results.textContent = `You have bested the rest of them ${user.name}, you are now the Mayor.  Are mayors strong?`;
     resultImage.src = '../assets/victory.gif';
     parade();
-    audio.src = '../assets/Celebration.mp3';
+    
 } else if (user.points === 0) {
     results.textContent = `You aren't fit to be Mayor ${user.name}!  Heck, you aren't even fit to be the Vice Mayor!`;
     resultImage.src = '../assets/lose.gif';
@@ -27,14 +29,13 @@ if (user.points >= 15) {
 
 resultPrompt.append(resultImage, results, button);
 
-
 button.addEventListener('click', () => {
     localStorage.clear();
     window.location = '../';
 });
 
 
-
+//Confetti npm import
 export function parade() {   
     var myCanvas = document.createElement('canvas');
     console.log(myCanvas);
@@ -70,7 +71,7 @@ export function parade() {
             origin: { x: 1 }
         });
   //     keep going until we are out of time
-        if (Date.now() < 100000) {
+        if (Date.now() < end) {
             requestAnimationFrame(frame);
         }
     }());
