@@ -8,6 +8,7 @@ body {
 .start {
     background-color: beige;
 }
+
 .name {
     display: flex;
     flex-direction: column;
@@ -79,14 +80,6 @@ button {
 
 
 }
-
-
-
-
-
-
-
-
 
 .trial {
     background-color: orange;

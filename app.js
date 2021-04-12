@@ -5,7 +5,7 @@ const form = document.querySelector('.entry');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    window.open('../music');
+    window.open('./music', 'popUpWindow', 'height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
     
     const data = new FormData(form);
     const name = data.get('name');
